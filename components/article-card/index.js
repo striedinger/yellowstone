@@ -20,7 +20,7 @@ const renderTree = (json, article) => {
   });
 };
 
-const article = {
+const mockArticle = {
   headline: "this is the headline",
   summary: "this is the summary",
   canonicalUrl: "https://google.com",
@@ -28,9 +28,10 @@ const article = {
 };
 
 const ArticleCard = props => {
+  const { article } = props;
   return (
     <article className={css.article}>
-      {renderTree(layoutOne, article)}
+      {renderTree(layoutOne, article || mockArticle)}
     </article>
   );
 };
