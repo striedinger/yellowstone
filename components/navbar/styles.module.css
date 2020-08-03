@@ -1,0 +1,15 @@
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #cfd7d7;
+  display: flex;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  align-items: center;
+  display: flex;
+  flex: 0 1 100%;
+  justify-content: center;
+}

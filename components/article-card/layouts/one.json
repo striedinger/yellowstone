@@ -1,0 +1,38 @@
+[
+  {
+    "type": "container",
+    "options": {
+      "direction": "row"
+    },
+    "children": [
+      {
+        "type": "container",
+        "options": {
+          "size": 50
+        },
+        "children": [
+          {
+            "type": "media"
+          }
+        ]
+      },
+      {
+        "type": "container",
+        "options": {
+          "size": 50
+        },
+        "children": [
+          {
+            "type": "headline",
+            "options": {
+              "tag": "h2"
+            }
+          },
+          {
+            "type": "summary"
+          }
+        ]
+      }
+    ]
+  }
+]
