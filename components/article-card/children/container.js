@@ -2,8 +2,9 @@ import React from 'react';
 import ContainerComponent from '../../container';
 
 const Container = props => {
-  const { children, className, direction, margin, padding, width } = props;
+  const { border, children, className, direction, margin, padding, width } = props;
   const options = {
+    border,
     className,
     direction,
     margin,
