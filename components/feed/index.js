@@ -23,10 +23,11 @@ const Feed = () => {
     variables: {
       page: 0,
       count,
-    }
+    },
+    notifyOnNetworkStatusChange: true,
   });
   const { articles = [] } = data || {};
-  const loadMore = () => {
+  const loadMore = event => {
     fetchMore({
       variables: {
         page: data.articles.length / count
@@ -38,7 +39,7 @@ const Feed = () => {
       {articles.map((article, index) => {
         return <ArticleCard key={index} article={article} />
       })}
-      <button onClick={loadMore} className={css.button}>Load More</button>
+      <button onClick={loadMore} className={css.button} disabled={loading}>{loading ? 'Loading' : 'Load more'}</button>
     </div>
   );
 };

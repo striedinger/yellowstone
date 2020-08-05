@@ -6,6 +6,11 @@
   margin-bottom: 20px;
 }
 
+.feed article:not(:last-of-type) {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
 .button {
   background: #fff;
   border: 1px solid #ccc;
