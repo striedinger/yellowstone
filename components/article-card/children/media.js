@@ -2,9 +2,9 @@ import React from 'react';
 
 const Media = props => {
   const { article = {}, className } = props;
-  const { headline, imageUrl } = article;
+  const { image: { url, caption } } = article;
   return (
-    <img alt={headline} className={className} src={imageUrl} />
+    <img alt={caption} className={className} src={url} />
   );
 };
 

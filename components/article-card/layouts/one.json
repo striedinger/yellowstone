@@ -8,7 +8,8 @@
       {
         "type": "container",
         "options": {
-          "width": 50
+          "padding": [0, 2, 0, 0],
+          "width": 25
         },
         "children": [
           {
@@ -19,7 +20,7 @@
       {
         "type": "container",
         "options": {
-          "width": 50
+          "width": "fill"
         },
         "children": [
           {

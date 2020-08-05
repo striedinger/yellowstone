@@ -1,11 +1,12 @@
 .article {
   display: flex;
   flex-wrap: wrap;
-  width: 400px;
+  width: 100%;
 }
 
 .headline {
   margin: 0;
+  margin-bottom: 6px;
   padding: 0;
 }
 
@@ -20,9 +21,11 @@
 
 .summary {
   margin: 0;
+  margin-bottom: 6px;
   padding: 0;
 }
 
 .media {
+  margin-bottom: 6px;
   width: 100%;
 }
