@@ -4,6 +4,8 @@ import paths from '../paths';
 import plugins from './plugins';
 import { client as clientLoaders } from './loaders';
 
+const isProd = process.env.NODE_ENV === 'production';
+
 export default {
   name: 'client',
   target: 'web',
@@ -52,7 +54,7 @@ export default {
         },
         parallel: true,
         cache: true,
-        sourceMap: true,
+        sourceMap: !isProd,
       })
     ],
     namedModules: true,

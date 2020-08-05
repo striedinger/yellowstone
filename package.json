@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=development babel-node scripts/development.js",
+    "start": "node build/server/server.js",
+    "build": "NODE_ENV=production webpack --config webpack.config.babel.js",
+    "dev": "NODE_ENV=development babel-node scripts/development.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -47,6 +49,7 @@
     "terser-webpack-plugin": "^3.0.8",
     "url-loader": "^4.1.0",
     "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-dev-server": "^3.11.0",
     "webpack-hot-middleware": "^2.25.0",

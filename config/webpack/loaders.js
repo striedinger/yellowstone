@@ -33,7 +33,7 @@ const cssModuleLoaderClient = {
     {
       loader: 'postcss-loader',
       options: {
-        sourceMap: true,
+        sourceMap: !isProd,
       },
     },
   ],
@@ -49,7 +49,7 @@ const cssLoaderClient = {
     {
       loader: 'postcss-loader',
       options: {
-        sourceMap: true,
+        sourceMap: !isProd,
       },
     },
   ],
@@ -68,7 +68,7 @@ const cssModuleLoaderServer = {
     {
       loader: 'postcss-loader',
       options: {
-        sourceMap: true,
+        sourceMap: !isProd,
       },
     },
   ],

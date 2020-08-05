@@ -2,6 +2,8 @@ import webpack from 'webpack';
 import WriteFileWebpackPlugin from 'write-file-webpack-plugin';
 import baseConfig from './client.base';
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const config = {
   ...baseConfig,
   plugins: [
@@ -10,7 +12,7 @@ const config = {
     ...baseConfig.plugins,
   ],
   mode: 'development',
-  devtool: 'cheap-module-inline-source-map',
+  devtool: isProd ? false : 'cheap-module-inline-source-map',
   performance: {
     hints: false,
   },
