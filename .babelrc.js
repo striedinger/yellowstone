@@ -3,4 +3,8 @@ module.exports = {
     '@babel/preset-react',
 		'@babel/preset-env',
   ],
+  plugins: [
+    "@babel/plugin-syntax-dynamic-import",
+    "@loadable/babel-plugin",
+  ],
 };

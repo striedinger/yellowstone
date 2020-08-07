@@ -1,7 +1,7 @@
 import path from 'path';
 import nodeExternals from 'webpack-node-externals';
 import paths from '../paths';
-import { server as serverLoaders, server } from './loaders';
+import { server as serverLoaders } from './loaders';
 import plugins from './plugins';
 
 export default {

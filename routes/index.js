@@ -1,5 +1,6 @@
-import Home from './home';
-import Test from './test';
+import loadable from '@loadable/component';
+const Home = loadable(() => import('./home'));
+const Test = loadable(() => import('./test'));
 
 export default [
   {
@@ -10,5 +11,6 @@ export default [
   {
     path: '/test',
     component: Test,
+    exact: true,
   },
 ];
