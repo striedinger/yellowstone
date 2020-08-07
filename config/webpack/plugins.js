@@ -1,3 +1,4 @@
+require('dotenv').config();
 import webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import LoadablePlugin from '@loadable/webpack-plugin';
@@ -14,15 +15,24 @@ export const shared = [
   }),
 ];
 
+const publicEnvVars = Object.keys(process.env)
+  .filter(envVar => envVar.startsWith('PUBLIC_'))
+  .reduce((object, envVar) => {
+    object[envVar] = process.env[envVar];
+    return object;
+  }, {});
+
 export const client = [
+  new webpack.DefinePlugin({
+    'process.env': JSON.stringify({
+      ...publicEnvVars,
+    }),
+  }),
   new BundleAnalyzerPlugin({ analyzerMode: 'json' }),
-  new webpack.DefinePlugin({}),
   isDev() && new ReactRefreshWebpackPlugin({ overlay: { sockIntegration: 'whm' } }),
 ].filter(Boolean);
 
-export const server = [
-  new webpack.DefinePlugin({}),
-];
+export const server = [];
 
 export default {
   client,
