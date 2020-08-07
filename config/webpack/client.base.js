@@ -1,5 +1,5 @@
-import path from 'path';
 import TerserPlugin from 'terser-webpack-plugin';
+import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 import paths from '../paths';
 import plugins from './plugins';
 import { client as clientLoaders } from './loaders';
@@ -55,7 +55,8 @@ export default {
         parallel: true,
         cache: true,
         sourceMap: !isProd,
-      })
+      }),
+      new OptimizeCSSAssetsPlugin(),
     ],
     namedModules: true,
     noEmitOnErrors: true,

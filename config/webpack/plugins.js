@@ -2,6 +2,7 @@ import webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import LoadablePlugin from '@loadable/webpack-plugin';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
 const isDev = () => process.env.NODE_ENV !== 'production';
 
@@ -14,6 +15,7 @@ export const shared = [
 ];
 
 export const client = [
+  new BundleAnalyzerPlugin({ analyzerMode: 'json' }),
   new webpack.DefinePlugin({}),
   isDev() && new ReactRefreshWebpackPlugin({ overlay: { sockIntegration: 'whm' } }),
 ].filter(Boolean);
