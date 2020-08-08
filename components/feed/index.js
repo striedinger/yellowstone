@@ -11,7 +11,11 @@ const GET_ARTICLES = gql`
       summary,
       image {
         url,
-        caption
+        caption,
+      },
+      authors {
+        seoName,
+        byline,
       }
     }
   }
@@ -25,15 +29,17 @@ const Feed = () => {
       count,
     },
     notifyOnNetworkStatusChange: true,
+    errorPolicy: 'ignore'
   });
   const { articles = [] } = data || {};
-  const loadMore = event => {
+  const loadMore = () => {
     fetchMore({
       variables: {
         page: data.articles.length / count
       }
     });
   };
+  
   return (
     <div className={css.feed}>
       {articles.map((article, index) => {

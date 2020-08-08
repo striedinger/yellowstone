@@ -29,3 +29,35 @@
   margin-bottom: 6px;
   width: 100%;
 }
+
+.byline {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.byline a {
+  color: #222;
+}
+
+.byline a:hover {
+  color: #0080c3;
+}
+
+.byline:before {
+  content: 'By ';
+  margin-right: 5px;
+}
+
+.byline li:not(:last-child) {
+  margin-right: 5px;
+}
+
+.byline li + li:last-child:before {
+  content: ' and ';
+}
+
+.byline li:not(:last-child):after {
+  content: ', ';
+}
