@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  margin: 0 20px;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .content {
+    margin: 0;
+    max-width: 576px;
+  }
+}

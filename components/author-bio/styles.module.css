@@ -1,0 +1,43 @@
+.author {
+  width: 100%;
+}
+
+.byline {
+  color: #333;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.title {
+  color: #666;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0 0 10px;
+}
+
+.bio {
+  color: #333;
+  font-size: 17px;
+  line-height: 27px;
+}
+
+.byline, .title {
+  text-align: center;
+}
+
+.hedcut-container {
+  border: 1px solid #eaeaea;
+  border-radius: 50%;
+  height: 120px;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 120px;
+}
+
+.hedcut {
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+}
