@@ -1,0 +1,30 @@
+.social-follow {
+  display: flex;
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.social-follow li:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.icon {
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.icon img {
+  width: 60%;
+}
+
+.twitter .icon {
+  background-color: #4099ff;
+}
+
+.email .icon {
+  background-color: #ccc;
+}

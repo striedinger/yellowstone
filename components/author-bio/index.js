@@ -1,5 +1,6 @@
 import React from 'react';
 import { gql, useQuery } from '@apollo/client';
+import SocialFollow from '../social-follow';
 import css from './styles.module.css';
 
 const GET_AUTHOR = gql`
@@ -25,7 +26,7 @@ const AuthorBio = props => {
     errorPolicy: 'ignore',
   });
   const { author } = data || {};
-  const { byline, title, hedcutUrl, bio, twitterHandle, email } = author || {};
+  const { facebookHandle, bio, byline, email, hedcutUrl, title, twitterHandle } = author || {};
   return (
     <div className={css.author}>
       { hedcutUrl && (
@@ -35,6 +36,7 @@ const AuthorBio = props => {
       ) }
       <h1 className={css.byline}>{byline}</h1>
       <h2 className={css.title}>{title}</h2>
+      <SocialFollow socials={{ facebookHandle, email, twitterHandle }} />
       <div className={css.bio} dangerouslySetInnerHTML={{ __html: bio }} />
     </div>
   );
