@@ -8,7 +8,7 @@ const Byline = props => {
     .map((author, index) => {
       return (
         <li key={index}>
-          <a href={`https://www.wsj.com/news/author/${author.seoName}`}>{author.byline}</a>
+          <a href={`/author/${author.seoName}`}>{author.byline}</a>
         </li>
       );
     })
