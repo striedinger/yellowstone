@@ -32,6 +32,7 @@ export default {
     child_process: 'empty',
   },
   optimization: {
+    minimize: true,
     minimizer: [
       new TerserPlugin({
         terserOptions: {
@@ -39,6 +40,7 @@ export default {
             ecma: 8,
           },
           compress: {
+            ecma: 5,
             warnings: false,
             comparisons: false,
             inline: 2,
@@ -48,6 +50,7 @@ export default {
           },
           output: {
             ecma: 5,
+            safari10: true,
             comments: false,
             ascii_only: true,
           }
