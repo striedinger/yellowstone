@@ -11,6 +11,7 @@ const GET_AUTHOR = gql`
       hedcutUrl,
       bio,
       twitterHandle,
+      facebookHandle,
       email,
     }
   }

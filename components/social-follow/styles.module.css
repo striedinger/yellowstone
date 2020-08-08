@@ -18,7 +18,15 @@
 }
 
 .icon img {
-  width: 60%;
+  width: 50%;
+}
+
+.facebook .icon {
+  background-color: #3b5998;
+}
+
+.facebook .icon img {
+  width: 25%;
 }
 
 .twitter .icon {
