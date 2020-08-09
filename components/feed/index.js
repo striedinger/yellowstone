@@ -4,8 +4,8 @@ import ArticleCard from '../article-card';
 import css from './styles.module.css';
 
 const GET_ARTICLES = gql`
-  query Feed($count: Int, $page: Int) {
-    articles(count: $count, page: $page) {
+  query Feed($count: Int, $page: Int, $sectionName: String) {
+    articles(count: $count, page: $page, sectionName: $sectionName) {
       canonicalUrl,
       headline,
       summary,
@@ -21,15 +21,17 @@ const GET_ARTICLES = gql`
   }
 `;
 
-const Feed = () => {
+const Feed = props => {
+  const { sectionName } = props;
   const count = 10;
   const { data, fetchMore, loading } = useQuery(GET_ARTICLES, {
     variables: {
-      page: 0,
       count,
+      page: 0,
+      sectionName,
     },
     notifyOnNetworkStatusChange: true,
-    errorPolicy: 'ignore'
+    errorPolicy: 'ignore',
   });
   const { articles = [] } = data || {};
   const loadMore = () => {
