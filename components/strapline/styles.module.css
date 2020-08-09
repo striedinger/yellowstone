@@ -1,0 +1,29 @@
+.strapline {
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.link {
+  display: flex;
+  color: #333;
+  text-decoration: none;
+  width: 100%;
+}
+
+.link:hover {
+  color: #0080c3;
+}
+
+.title {
+  flex: 1 1 auto;
+}
+
+.icon {
+  display: block;
+  box-sizing: border-box;
+  height: 18px;
+  padding-right: 6px;
+  width: 18px;
+}
