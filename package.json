@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node build/server/server.js",
     "build": "NODE_ENV=production rimraf build && webpack --config webpack.config.babel.js",
+    "verce-build": "npm run build",
     "dev": "NODE_ENV=development babel-node scripts/development.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
