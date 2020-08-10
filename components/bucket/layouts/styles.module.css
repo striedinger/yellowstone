@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.column {
+  flex: 1;
+}
+
+.container.inner:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.container.inner .column,
+.container.inner .column article {
+  border: none;
+}
+
+.column:not(:last-child) {
+  border-right: 1px solid #ccc;
+  padding-right: 10px;
+}
+
+.column:not(:first-of-type) {
+  padding-left: 10px;
+}
+
+.column article:not(:last-of-type) {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.lead-column {
+  flex: 2;
+  padding-left: 10px;
+}
+
+.lead-column article:first-of-type {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}

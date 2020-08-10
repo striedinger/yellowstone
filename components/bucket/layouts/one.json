@@ -1,0 +1,86 @@
+[
+  {
+    "type": "container",
+    "options": {
+      "direction": "row",
+      "margin": [3, 0]
+    }, 
+    "children": [
+      {
+        "type": "container",
+        "options": {
+          "width": 33
+        },
+        "children": [
+          {
+            "type": "article"
+          }
+        ]
+      },
+      {
+        "type": "container",
+        "options": {
+          "width": 33
+        },
+        "children": [
+          {
+            "type": "article"
+          }
+        ]
+      },
+      {
+        "type": "container",
+        "options": {
+          "width": 33
+        },
+        "children": [
+          {
+            "type": "article"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "container",
+    "options": {
+      "direction": "row",
+      "margin": [3, 0]
+    }, 
+    "children": [
+      {
+        "type": "container",
+        "options": {
+          "width": 33
+        },
+        "children": [
+          {
+            "type": "article"
+          }
+        ]
+      },
+      {
+        "type": "container",
+        "options": {
+          "width": 33
+        },
+        "children": [
+          {
+            "type": "article"
+          }
+        ]
+      },
+      {
+        "type": "container",
+        "options": {
+          "width": 33
+        },
+        "children": [
+          {
+            "type": "article"
+          }
+        ]
+      }
+    ]
+  }
+]

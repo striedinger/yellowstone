@@ -1,7 +1,12 @@
 import React from 'react';
 import childrenElements from './children';
-import layoutOne from './layouts/one.json';
 import css from './styles.module.css';
+
+const layouts = {
+  feed: require('./layouts/feed.json'),
+  simple: require('./layouts/simple.json'),
+  'media-simple': require('./layouts/media-simple.json'),
+};
 
 const renderTree = (json, article) => {
   return json.map((element, index) => {
@@ -20,18 +25,13 @@ const renderTree = (json, article) => {
   });
 };
 
-const mockArticle = {
-  headline: "this is the headline",
-  summary: "this is the summary",
-  canonicalUrl: "https://google.com",
-  imageUrl: "https://images.wsj.net/im-215911?width=220&height=147&pixel_ratio=2",
-};
-
 const ArticleCard = props => {
-  const { article } = props;
+  const { article, layout: selectedLayout = 'simple' } = props;
+  if (!article) return null;
+  if (!layouts[selectedLayout]) return null;
   return (
     <article className={css.article}>
-      {renderTree(layoutOne, article || mockArticle)}
+      {renderTree(layouts[selectedLayout], article)}
     </article>
   );
 };

@@ -45,7 +45,7 @@ const Feed = props => {
   return (
     <div className={css.feed}>
       {articles.map((article, index) => {
-        return <ArticleCard key={index} article={article} />
+        return <ArticleCard key={index} article={article} layout="feed" />
       })}
       <button onClick={loadMore} className={css.button} disabled={loading}>{loading ? 'Loading' : 'Load more'}</button>
     </div>
