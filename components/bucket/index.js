@@ -15,7 +15,7 @@ const elements = {
 
 const GET_COLLECTION = gql`
   query Collection($collectionId: String!) {
-    collection(collectionId: $collectionId) {
+    collection(id: $collectionId) {
       id,
       parameters {
         name, value
