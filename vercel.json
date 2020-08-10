@@ -7,7 +7,7 @@
       "config": { "distDir": "build" }
     },
     {
-      "src": "build/server/server.js",
+      "src": "/build/server/server.js",
       "use": "@vercel/node"
     }
   ],
