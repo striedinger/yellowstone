@@ -12,7 +12,6 @@ const elements = {
   container: Container,
 };
 
-
 const GET_COLLECTION = gql`
   query Collection($collectionId: String!) {
     collection(id: $collectionId) {
@@ -63,6 +62,7 @@ const renderTree = (json, articles) => {
 };
 
 const Bucket = props => {
+  // Fetch collection data based on collectionId
   const { collectionId } = props;
   const { data } = useQuery(GET_COLLECTION, {
     variables: {

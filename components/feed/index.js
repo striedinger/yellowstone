@@ -24,6 +24,8 @@ const GET_ARTICLES = gql`
 const Feed = props => {
   const { sectionName } = props;
   const count = 10;
+  // Fetch articles from a feed based on sectionName, leave blank for all
+  // Apollo includes built in support for fetching paginated data, and loading flag
   const { data, fetchMore, loading } = useQuery(GET_ARTICLES, {
     variables: {
       count,
@@ -33,7 +35,8 @@ const Feed = props => {
     notifyOnNetworkStatusChange: true,
     errorPolicy: 'ignore',
   });
-  const { articles = [] } = data || {};
+
+  // onClick event to use Apollo's fetchMore, updating variables and refetching
   const loadMore = () => {
     fetchMore({
       variables: {
@@ -41,6 +44,8 @@ const Feed = props => {
       }
     });
   };
+
+  const { articles = [] } = data || {};
   
   return (
     <div className={css.feed}>
